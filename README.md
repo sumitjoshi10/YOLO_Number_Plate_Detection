@@ -1,6 +1,6 @@
-# 📝 Text Sentiment Analysis
+# 🚗 YOLO Number Plate Detection
 
-This project focuses on **analyzing and classifying text data** into sentiment categories such as Positive, Negative, or Neutral using Machine Learning techniques.  
+This project focuses on **detecting vehicle number plates in images and videos** using the **YOLO (You Only Look Once)** object detection algorithm.
 
 It is part of the **ODCRU Data Science Internship Program**.
 
@@ -8,19 +8,31 @@ It is part of the **ODCRU Data Science Internship Program**.
 
 ## 🛠 Project Overview
 
-- **Goal:** Build an accurate sentiment classification system for text data  
-- **Techniques:** Text preprocessing, feature extraction, ML model training, evaluation  
-- **Output:** Predicted sentiment labels for input text  
+- **Goal:** Accurately detect vehicle number plates in real-time  
+- **Approach:** Object detection using YOLO deep learning architecture  
+- **Input:** Images / video streams containing vehicles  
+- **Output:** Bounding boxes around detected number plates  
+
+---
+
+## 🧠 Model Details
+
+- **Algorithm:** YOLO (v5 / v7 / v8 – specify version used)
+- **Framework:** PyTorch / Ultralytics
+- **Training:** Custom annotated number plate dataset
+- **Performance Metrics:** Precision, Recall, mAP
 
 ---
 
 ## 🧰 Tech Stack
 
 - Python
-- Scikit-learn
-- Pandas & NumPy
-- NLP preprocessing libraries (NLTK / SpaCy)
-- Jupyter Notebooks for exploration and experiments
+- YOLO (Ultralytics)
+- OpenCV
+- PyTorch
+- NumPy
+- Matplotlib
+- Jupyter Notebook
 
 ---
 
