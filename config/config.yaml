@@ -1,0 +1,7 @@
+artifacts_root: artifacts
+
+YOLO8:
+  model_name: yolov8n.pt
+  model_type: pretrained_models
+  model_parent_folder: ${artifacts_root}/$(YOLO8.model_type)
+  model_saved_path: $(YOLO8.model_parent_folder)/${YOLO8.model_name}
