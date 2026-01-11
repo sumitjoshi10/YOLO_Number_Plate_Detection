@@ -1,6 +1,6 @@
 from box import ConfigBox
 
-from utility.utils_helper import resolve_config
+from yolo_number_plate_detection.utility.utils_helper import resolve_config
 
 
 import yaml
@@ -21,3 +21,6 @@ def read_yaml(path_to_yaml: str) -> ConfigBox:
             return ConfigBox(content)
     except Exception as e:
         raise e  
+
+    
+    

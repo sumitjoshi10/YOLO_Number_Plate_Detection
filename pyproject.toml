@@ -9,7 +9,8 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "python-box (>=7.3.2,<8.0.0)",
-    "pyaml (>=25.7.0,<26.0.0)"
+    "pyaml (>=25.7.0,<26.0.0)",
+    "ultralytics (>=8.3.252,<9.0.0)"
 ]
 
 packages = [
@@ -25,3 +26,6 @@ build-backend = "poetry.core.masonry.api"
 dev = [
     "ipykernel (>=7.1.0,<8.0.0)"
 ]
+
+[tool.poetry.scripts]
+train = "yolo_number_plate_detection.pipline.training_pipeline:train"
