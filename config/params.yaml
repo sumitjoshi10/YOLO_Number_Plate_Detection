@@ -1,0 +1,33 @@
+artifacts_root: artifacts
+
+image_data:
+  data_parent_folder: data
+  data_file_name: data.yaml
+  data_file_path: ${image_data.data_parent_folder}/${image_data.data_file_name}
+
+training_params_yolo8:
+  data: ${image_data.data_file_path}
+  epochs: 10
+  img_size: 416
+  batch_size: 2
+  device: 0
+  project: ${artifacts_root}
+  name: trained_yolo8_model
+  exist_ok: True
+  workers: 0
+  mosaic: 0
+  amp: False
+
+evaluate_params_yolo8:
+  data: ${image_data.data_file_path}
+  img_size: ${training_params_yolo8.img_size}
+  batch_size: ${training_params_yolo8.batch_size}
+  device: ${training_params_yolo8.device}
+  project: ${artifacts_root}
+  name: ${training_params_yolo8.name}_val
+  save: True
+  plots: True
+  metrics_filename: metrics.json
+  final_plot_name: final_metrics.png
+  metrics_file_path: ${artifacts_root}/${evaluate_params_yolo8.name}/${evaluate_params_yolo8.metrics_filename}
+  final_plot_path: ${artifacts_root}/${evaluate_params_yolo8.name}/${evaluate_params_yolo8.final_plot_name}

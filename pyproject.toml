@@ -28,4 +28,4 @@ dev = [
 ]
 
 [tool.poetry.scripts]
-train = "yolo_number_plate_detection.pipline.training_pipeline:train"
+train = "yolo_number_plate_detection.pipeline.training_pipeline:train"

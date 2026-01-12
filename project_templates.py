@@ -15,7 +15,7 @@ list_of_files = [
     f"src/{project_name}/logger/__init__.py",
     f"src/{project_name}/configuration/__init__.py",
     f"src/{project_name}/constants/__init__.py",
-    f"src/{project_name}/pipline/__init__.py",
+    f"src/{project_name}/pipeline/__init__.py",
     "experiment/experiments.ipynb",
     "api/app.py",
     "requirements.txt",

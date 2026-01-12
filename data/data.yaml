@@ -1,5 +1,5 @@
 names:
   0: license_plate
 nc: 1
-train: data/train
-val: data/val
+train: train
+val: test
