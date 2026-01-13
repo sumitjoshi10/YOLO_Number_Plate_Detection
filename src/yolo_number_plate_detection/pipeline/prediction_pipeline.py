@@ -14,10 +14,8 @@ def predict(image_path):
         params=params.inference_params_yolo8,
         image_path=image_path
     )
-    for r in results:
-        img = r.plot()
-        cv2.imshow("License Plate Detection", img)
-        cv2.waitKey(0)
+    
+    return results[0].plot()
 
-
-predict("data/test/images/Cars199.png")
+if __name__ == "__main__":
+    predict("data/test/images/Cars199.png")
