@@ -1,0 +1,35 @@
+[project]
+name = "yolo_number_plate_detection"
+version = "0.1.0"
+description = "It will detect the car number plate from the provided image"
+authors = [
+    {name = "Sumit Joshi",email = "sumit.joshi9818@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "python-box (>=7.3.2,<8.0.0)",
+    "pyaml (>=25.7.0,<26.0.0)",
+    "ultralytics (>=8.3.252,<9.0.0)",
+    "uvicorn (>=0.40.0,<0.41.0)",
+    "fastapi (>=0.128.0,<0.129.0)",
+    "python-multipart (>=0.0.21,<0.0.22)"
+]
+
+packages = [
+    { include = "yolo_number_plate_detection", from = "src" }
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "ipykernel (>=7.1.0,<8.0.0)"
+]
+
+[tool.poetry.scripts]
+train = "yolo_number_plate_detection.pipeline.training_pipeline:train"
+predict = "yolo_number_plate_detection.pipeline.prediction_pipeline:train"
