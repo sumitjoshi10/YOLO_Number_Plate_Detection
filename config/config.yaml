@@ -7,8 +7,10 @@ yolo8:
   model_saved_path: ${yolo8.model_parent_folder}/${yolo8.model_name}
 
 trained_yolo8_model:
-  model_name: pass
-  model_type: trained_yolo8_models
-  model_parent_folder: ${artifacts_root}/${trained_yolo8_model.model_type}
+  model_name: best.pt
+  model_type: trained_yolo8_model
+  model_parent_folder: ${artifacts_root}/${trained_yolo8_model.model_type}/weights
   model_saved_path: ${trained_yolo8_model.model_parent_folder}/${trained_yolo8_model.model_name}
 
+inference_yolo8_model:
+  model_path : ${trained_yolo8_model.model_saved_path}
