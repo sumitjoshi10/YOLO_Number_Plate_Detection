@@ -1,3 +1,4 @@
+import cv2
 from yolo_number_plate_detection.constants.constants import *
 from yolo_number_plate_detection.utility.utils import read_yaml
 from yolo_number_plate_detection.components.model_loader import load_pretrained_model
@@ -13,6 +14,10 @@ def predict(image_path):
         params=params.inference_params_yolo8,
         image_path=image_path
     )
-    return results
+    for r in results:
+        img = r.plot()
+        cv2.imshow("License Plate Detection", img)
+        cv2.waitKey(0)
 
-predict("data/test/images/Cars33.png")
+
+predict("data/test/images/Cars199.png")

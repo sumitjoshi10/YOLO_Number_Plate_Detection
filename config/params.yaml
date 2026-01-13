@@ -33,13 +33,4 @@ evaluate_params_yolo8:
   final_plot_path: ${artifacts_root}/${evaluate_params_yolo8.name}/${evaluate_params_yolo8.final_plot_name}
 
 inference_params_yolo8:
-  img_size: ${training_params_yolo8.img_size}
   confidence_threshold: 0.4
-  iou_threshold: 0.5
-  device: ${training_params_yolo8.device}
-  save: True
-  save_txt: True
-  save_conf: True
-  project: ${artifacts_root}
-  name: inference_results
-  exist_ok: True
